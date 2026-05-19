@@ -1,0 +1,77 @@
+
+SYNCUP - REAL-TIME FEED APPLICATION  
+Complete Windows Setup Guide (One Page)
+
+
+BEFORE YOU START (Install These First)
+
+Software: Node.js | Download: [https://nodejs.org/](https://nodejs.org/) | Version: v18 or higher  
+Software: MongoDB | Download: [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community) | Version: Latest  
+Software: Redis | Download: [https://github.com/microsoftarchive/redis/releases](https://github.com/microsoftarchive/redis/releases) | Version: Redis-x64-3.0.504.msi  
+
+
+QUICK START (5 Steps)
+
+Step 1: Start MongoDB & Redis (Open Command Prompt as Administrator)  
+net start MongoDB  
+net start Redis  
+
+Step 2: Open Terminal 1 - Backend  
+cd backend  
+npm install  
+npm run dev  
+
+Step 3: Open Terminal 2 - Frontend  
+cd frontend  
+npm install  
+npm run dev  
+
+Step 4: Open Browser  
+Home Page:  http://localhost:3000  
+Admin Page: http://localhost:3000/admin  
+
+Step 5: Test the App  
+1. Go to Admin page (http://localhost:3000/admin)  
+2. Enter Title, Content, Author  
+3. Click "Create Feed"  
+4. Switch to Home page - feed appears instantly  
+
+WHAT EACH PAGE DOES
+
+Home: http://localhost:3000 → View all feeds (updates automatically)  
+Admin: http://localhost:3000/admin → Create new feeds  
+
+HOW IT WORKS
+
+Admin Page → Create Feed → Save to MongoDB → Clear Redis Cache → Send Real-time Update → Home Page Shows Instantly  
+
+QUICK COMMANDS SUMMARY
+
+Start Services (Administrator):  
+net start MongoDB  
+net start Redis  
+
+Backend (Terminal 1):  
+cd backend && npm install && npm run dev  
+
+Frontend (Terminal 2):  
+cd frontend && npm install && npm run dev  
+
+Open Browser:  
+start http://localhost:3000  
+start http://localhost:3000/admin  
+
+---
+
+SUCCESS INDICATORS
+
+Backend → "Server running on http://localhost:5000"  
+MongoDB → "MongoDB connected successfully"  
+Redis → "Redis connected successfully"  
+Frontend → "Next.js started on http://localhost:3000"  
+Browser → Green "Live" indicator on Home page  
+
+---
+
+Ready to use! Your SyncUP application is now running on Windows.
+
